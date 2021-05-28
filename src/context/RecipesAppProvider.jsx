@@ -28,6 +28,7 @@ function RecipesAppProvider({ children }) {
 
   const handleSearchClick = async (inputs, pathname) => {
     const { searchText, filter } = inputs;
+    setShowSearchBar(false);
     let apiResponse = [];
     if ((filter === 'firstLetter') && (searchText.length > 1)) {
       alert('Sua busca deve conter somente 1 (um) caracter');
