@@ -1,0 +1,82 @@
+.done-recipes-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40px;
+}
+
+.done-recipes-buttons-container {
+  align-items: center;
+  display: flex;
+  height: 70px;
+  justify-content: space-around;
+}
+
+.done-recipes-buttons-container > button {
+  background-color: #0fa36b;
+  border-radius: 5px;
+  color: white;
+  height: 40px;
+  width: 70px;
+}
+
+.done-recipe-card {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%) , 0 6px 20px 0 rgb(0 0 0 / 19%);
+  display: flex;
+  height: 150px;
+  justify-content: space-between;
+  margin: 10px 15px;
+}
+
+.recipe-image {
+  border-radius: 5px;
+  height: 150px;
+  width: 120px;
+}
+
+.done-recipe-text-container {
+  padding: 10px;
+  width: 100%;
+}
+
+.done-recipe-text-container-top {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.share-btn {
+  background-color: white;
+  font-size: 12px;
+  height: 30px;
+  margin-bottom: 0;
+  padding: 1px;
+}
+
+.share-btn > img {
+  width: 26px;
+}
+
+.done-recipe-top-text {
+  color: gray;
+  font-size: 13px;
+  margin: 0;
+}
+
+.done-recipe-title {
+  font-weight: 700;
+  margin: 5px 0;
+}
+
+.done-recipe-date {
+  margin: 0;
+  font-size: 13px;
+}
+
+.done-recipe-text-container > span {
+  background-color: #0fa36b;
+  border-radius: 5px;
+  color: white;
+  font-size: 13px;
+  padding: 2px 5px;
+}

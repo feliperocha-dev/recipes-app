@@ -1,0 +1,24 @@
+.loading-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  top: 50%;
+  position: fixed;
+}
+
+.loading {
+  animation: spin 2s linear infinite;
+  border: 10px solid #5dcfa4;
+  border-radius: 50%;
+  border-top: 10px solid #0fa36b;
+  height: 50px;
+  width: 50px;
+}
+
+@keyframes spin {
+
+  0% { transform: rotate(0deg); }
+
+  100% { transform: rotate(360deg); }
+}

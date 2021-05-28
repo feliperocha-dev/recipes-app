@@ -1,0 +1,82 @@
+.favorite-card {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%) , 0 6px 20px 0 rgb(0 0 0 / 19%);
+  display: flex;
+  height: 130px;
+  justify-content: space-between;
+  margin: 15px;
+}
+
+.favorite-recipe-card {
+  display: flex;
+  flex-direction: row;
+  height: 130px;
+  width: 100%;
+}
+
+.favorite-recipe-card > img {
+  border-radius: 5px;
+  width: 120px;
+}
+
+.favorite-card > div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.recipe-name {
+  margin-left: 10px;
+}
+
+.recipe-name > a > p {
+  font-weight: 700;
+  padding: 5px;
+  margin: 0;
+}
+
+.recipe-name > span {
+  font-weight: 200;
+  padding-left: 5px;
+}
+
+.share-btn {
+  border: none;
+  text-decoration: none;
+  width: 60px;
+}
+
+.favorite-card-buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.favorite-card-buttons > button {
+  background-color: white;
+  border: none;
+  height: 30px;
+  max-width: 40px;
+  padding: 1px;
+}
+
+.favorite-card-buttons > button > img {
+  height: 30px;
+  max-width: 40px;
+  padding: 1px;
+}
+
+.favorite-recipes-buttons-container {
+  align-items: center;
+  display: flex;
+  height: 70px;
+  justify-content: space-around;
+}
+
+.favorite-recipes-buttons-container > button {
+  background-color: #0fa36b;
+  border-radius: 5px;
+  color: white;
+  height: 40px;
+  width: 70px;
+}

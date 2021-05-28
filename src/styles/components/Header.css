@@ -1,0 +1,23 @@
+.header {
+  align-items: center;
+  background-color: #0fa36b;
+  color: white;
+  display: flex;
+  height: 72px;
+  justify-content: space-around;
+}
+
+.header > button {
+  background-color: inherit;
+  border: none;
+}
+
+.header > h1 {
+  max-width: 180px;
+  text-align: center;
+}
+
+.header > div {
+  width: 30px;
+}
+
