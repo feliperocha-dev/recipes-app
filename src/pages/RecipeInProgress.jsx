@@ -32,7 +32,7 @@ function RecipeInProgress({ match: { params: { id } } }) {
       alcoholicOrNot: '',
       name: mealId.strMeal,
       image: mealId.strMealThumb,
-      doneDate: `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`,
+      doneDate: `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`,
       tags: (mealId.strTags !== null) ? [...mealId.strTags.split(',')] : [''],
     }];
     if (doneRecipes === null) {

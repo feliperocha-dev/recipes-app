@@ -32,7 +32,7 @@ function DrinkInProgress({ match: { params: { id } } }) {
       alcoholicOrNot: drinkId.strAlcoholic,
       name: drinkId.strDrink,
       image: drinkId.strDrinkThumb,
-      doneDate: `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`,
+      doneDate: `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`,
       tags: (drinkId.strTags !== null) ? [drinkId.strTags] : [''],
     }];
     if (doneRecipes === null) {
