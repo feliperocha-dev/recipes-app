@@ -33,7 +33,7 @@ function RecipeInProgress({ match: { params: { id } } }) {
       name: mealId.strMeal,
       image: mealId.strMealThumb,
       doneDate: `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`,
-      tags: (mealId.strTags !== null) ? [mealId.strTags] : [''],
+      tags: (mealId.strTags !== null) ? [...mealId.strTags.split(',')] : [''],
     }];
     if (doneRecipes === null) {
       localStorage.setItem('doneRecipes', JSON.stringify(doneRecipe));
