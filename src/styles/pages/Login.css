@@ -23,13 +23,18 @@
 
 .login-form-container > input {
   border-radius: 5px;
+  font-size: large;
+  height: 45px;
   margin-bottom: 15px;
+  padding-left: 10px;
+  width: 280px;
 }
 
 .login-form-container > button {
   background-color: #28a745;
   border-radius: 5px;
   color: white;
+  height: 40px;
   margin-top: 20px;
   transition: 1s;
   width: 100px;
