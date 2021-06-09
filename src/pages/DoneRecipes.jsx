@@ -18,7 +18,7 @@ function DoneRecipes() {
 
   function shareButtonClick(id, type) {
     setCopy({ ...copied, [id]: true });
-    copy(`http://localhost:3000/${type}s/${id}`);
+    copy(`https://recipes-app-trybe.netlify.app/${type}s/${id}`);
     renderMessage();
   }
 

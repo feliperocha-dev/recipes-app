@@ -6,17 +6,15 @@ import BottomMenu from '../components/BottomMenu';
 import RecipesAppContext from '../context/RecipesAppContext';
 import '../styles/pages/MainPage.css';
 import Loading from '../components/Loading';
+import DrinksCategoriesButtons from '../components/DrinksCategoriesButtons';
 
 const CARDS_LIMIT = 12;
-const BUTTONS_LIMIT = 5;
 
 function MainDrinks() {
   const {
     cocktailsRecipes,
     redirect,
     isFetching,
-    cocktailsCategories,
-    handleCocktailCategoryClick,
     isFetchingCategories,
   } = useContext(RecipesAppContext);
   return (
@@ -24,28 +22,7 @@ function MainDrinks() {
       <Header />
       <div className="main-page-container">
         { (redirect) && <Redirect to={ `/bebidas/${cocktailsRecipes[0].idDrink}` } /> }
-        { !(isFetchingCategories) && (
-          <div className="categories-buttons-container">
-            <button
-              type="button"
-              data-testid="All-category-filter"
-              onClick={ handleCocktailCategoryClick }
-            >
-              All
-            </button>
-            { cocktailsCategories
-              .map(({ strCategory }, index) => (index < BUTTONS_LIMIT) && (
-                <button
-                  type="button"
-                  data-testid={ `${strCategory}-category-filter` }
-                  key={ `${strCategory}-category-filter` }
-                  onClick={ handleCocktailCategoryClick }
-                >
-                  { strCategory }
-                </button>
-              )) }
-          </div>
-        ) }
+        { !(isFetchingCategories) && (<DrinksCategoriesButtons />) }
         { (!(isFetching) && (cocktailsRecipes !== null)) && (
           <div className="recipes-container">
             { cocktailsRecipes.map((drink, index) => ((index < CARDS_LIMIT) && (

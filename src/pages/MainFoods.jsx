@@ -6,17 +6,15 @@ import BottomMenu from '../components/BottomMenu';
 import RecipesAppContext from '../context/RecipesAppContext';
 import '../styles/pages/MainPage.css';
 import Loading from '../components/Loading';
+import MealsCategoriesButtons from '../components/MealsCategoriesButtons';
 
 const CARDS_LIMIT = 12;
-const BUTTONS_LIMIT = 5;
 
 function MainFoods() {
   const {
     mealsRecipes,
-    mealsCategories,
     redirect,
     isFetching,
-    handleMealCategoryClick,
     isFetchingCategories,
   } = useContext(RecipesAppContext);
   return (
@@ -24,27 +22,7 @@ function MainFoods() {
       <Header />
       <div className="main-page-container">
         { (redirect) && <Redirect to={ `/comidas/${mealsRecipes[0].idMeal}` } /> }
-        { !(isFetchingCategories) && (
-          <div className="categories-buttons-container">
-            <button
-              type="button"
-              data-testid="All-category-filter"
-              onClick={ handleMealCategoryClick }
-            >
-              All
-            </button>
-            { mealsCategories
-              .map(({ strCategory }, index) => (index < BUTTONS_LIMIT) && (
-                <button
-                  type="button"
-                  data-testid={ `${strCategory}-category-filter` }
-                  key={ `${strCategory}-category-filter` }
-                  onClick={ handleMealCategoryClick }
-                >
-                  { strCategory }
-                </button>)) }
-          </div>
-        ) }
+        { !(isFetchingCategories) && ( <MealsCategoriesButtons />) }
         { (!(isFetching) && (mealsRecipes !== null)) && (
           <div className="recipes-container">
             { mealsRecipes.map((meal, index) => ((index < CARDS_LIMIT) && (

@@ -17,7 +17,7 @@ function RecipeShareButton() {
   function shareButtonClick() {
     setCopy(true);
     const url = history.location.pathname.replace('/in-progress', '');
-    copy(`http://localhost:3000${url}`);
+    copy(`https://recipes-app-trybe.netlify.app//${url}`);
     renderMessage();
   }
 
